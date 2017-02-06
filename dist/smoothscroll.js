@@ -242,6 +242,16 @@
         ~~arguments[0].top + (w.scrollY || w.pageYOffset)
       );
     };
+    
+    // Element.prototype.scroll
+    Element.prototype.scroll = function(x, y) {
+      smoothScroll.call(
+        this,
+        this,
+        x,
+        y
+      );
+    };
 
     // Element.prototype.scrollIntoView
     Element.prototype.scrollIntoView = function() {
